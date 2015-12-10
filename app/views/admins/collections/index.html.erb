@@ -1,0 +1,29 @@
+<h1>Collection index</h1>
+ 
+<table>
+  <tr>
+    <th>Naam</th>
+    <th>Omschrijving</th>
+    <th>Jaar</th>
+    <th>User ID</th>
+  </tr>
+ 
+  <% @collection.each do |collection| %>
+    <tr>
+      <td><%= collection.name %></td>
+      <td><%= collection.description %></td>
+      <td><%= collection.year %></td>
+      <td><%= collection.user_id %></td>
+      <td><%= link_to 'Show', admins_collection_path(collection) %></td>
+      <td><%= link_to 'Edit', edit_admins_collection_path(collection) %></td>
+      <td><%= link_to 'Destroy', admins_collection_path(collection),
+              method: :delete,
+              data: { confirm: 'Are you sure?' } %></td>
+    </tr>
+  <% end %>
+</table>
+
+<%= link_to 'New collection', new_admins_collection_path %>
+
+
+

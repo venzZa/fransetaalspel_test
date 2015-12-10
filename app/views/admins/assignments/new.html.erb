@@ -1,0 +1,17 @@
+<h1>Opdracht toevoegen</h1>
+<%= form_for @assignment, url: admins_collection_assignments_path do |f| %>
+    <p>
+      <%= f.label :question, 'Vraag:' %>
+      <%= f.text_field :question %>
+    </p>
+
+    <p>
+      <%= f.label :answer, 'Antwoord:' %>
+      <%= f.text_field :answer %>
+    </p>
+
+    <p>
+      <%= f.submit 'Verstuur' %>
+      <%= link_to "Terug", admins_collection_path(params[:collection_id]) %>
+    </p>
+<% end %>

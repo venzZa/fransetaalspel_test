@@ -1,0 +1,23 @@
+<h1>Opdracht aanpassen</h1>
+<%= form_for @assignment, url: admins_collection_assignment_path do |f| %>
+  <div class="form-group">
+    <p>
+      <%= f.label :question, 'Vraag:' %>
+      <%= f.text_field :question, class: "form-control" %>
+    </p>
+  </div>
+
+  <div class="form-group">
+    <p>
+      <%= f.label :answer, 'Antwoord:' %>
+      <%= f.text_field :answer, class: "form-control" %>
+    </p>
+  </div>
+
+  <div class="form-group">
+    <p>
+      <%= f.submit 'Verstuur', class: "btn btn-primary" %>
+      <%= link_to "Terug", admins_collection_path(params[:collection_id]), class: "btn btn-default"  %>
+    </p>
+  </div>
+<% end %>
