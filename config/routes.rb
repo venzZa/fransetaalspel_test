@@ -6,6 +6,7 @@ devise_for :users, controllers: {
 root 'pages#index'
 
 resources :games
+resources :lobby
 
 namespace :admins do
   resources :collections do
