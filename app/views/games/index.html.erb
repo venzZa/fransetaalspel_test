@@ -1,1 +1,9 @@
 <h1>games</h1>
+
+<% @users.each_slice((@users.size.to_f / 4).ceil) do |user| %>
+  <ul>
+    <% user.each do |user| %>
+      <li><%= user.email %></li>
+    <% end %>
+  </ul>
+<% end %>
