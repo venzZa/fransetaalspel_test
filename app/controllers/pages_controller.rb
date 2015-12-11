@@ -1,5 +1,5 @@
 class PagesController < ApplicationController
-  def index
-    
+  def lobby
+    @users = User.all
   end
 end
