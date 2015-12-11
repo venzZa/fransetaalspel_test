@@ -1,1 +1,5 @@
 <p>Lobby</p>
+   <% @users.each do |u| %>
+    <ul> <%= u.username %> </ul>
+  <% end %>
+<%= link_to 'Start Game', games_path %>

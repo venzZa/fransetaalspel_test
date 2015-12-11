@@ -1,12 +1,13 @@
 Rails.application.routes.draw do
 devise_for :users, controllers: {
-  sessions: 'users/sessions'
+  sessions: 'users/sessions',
+  registrations: 'users/registrations'
   }
 
 root 'pages#index'
 
 resources :games
-resources :lobby
+get 'lobby' => 'pages#lobby'
 
 namespace :admins do
   resources :collections do
